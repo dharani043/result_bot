@@ -1,0 +1,11 @@
+services:
+  - type: worker
+    name: result-bot
+    env: python
+    buildCommand: |
+      pip install -r requirements.txt
+      playwright install chromium
+    startCommand: python bot.py
+    envVars:
+      - key: BOT_TOKEN
+        value: 8433417975:AAGI-8ugEGipaeWsb1NF4lbdncJJbenPDUA
